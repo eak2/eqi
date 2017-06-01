@@ -1,9 +1,23 @@
+<div class="pos-f-t fixed-top header ">
+    <nav class="navbar navbar-inverse topnav navbar-toggleable-md ">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mt-2 mt-md-0">
+                <li class="nav-item dropdown" ngbDropdown>
+                    <a [routerLink]="['/']" class="nav-link">
+                        <i class="fa fa-home" aria-hidden="true"></i> Home <b class="caret"></b>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
 <div class="login-page">
     <div class="row">
-        <div class="col-md-4 push-md-4">
-            <img class="user-avatar" src="assets/images/logo.png" width="150px" />
-            <h1>SB Admin BS4 Angular4</h1>
-            <form role="form">
+        <div class="col-md-4 push-md-4 text-center p-3" style="margin-top:10%">
+              <img src="assets/images/logo.png" class="user-avatar img-fluid " />
+          
+            <form role="form" style="clear:both; margin-top:30px;">
                 <div class="form-content">
                     <div class="form-group">
                         <input type="text" class="form-control input-underline input-lg" id="" placeholder="Full Name">
@@ -20,8 +34,8 @@
                         <input type="password" class="form-control input-underline input-lg" id="" placeholder="Repeat Password">
                     </div>
                 </div>
-                <a class="btn rounded-btn" [routerLink]="['/dashboard']"> Register </a>&nbsp;
-                <a class="btn rounded-btn" [routerLink]="['/login']"> Log in </a>
+                <a class="btn rounded-btn searchBtn" [routerLink]="['/dashboard']"> Register </a>&nbsp;
+                <a class="btn rounded-btn searchBtn" [routerLink]="['/login']"> Log in </a>
             </form>
         </div>
     </div>
