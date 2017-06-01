@@ -1,0 +1,34 @@
+<div class="pos-f-t fixed-top header">
+    <nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+                <li class="nav-item dropdown" ngbDropdown>
+                    <a [routerLink]="['/login']" class="nav-link">
+                       <i class="fa fa-lock" aria-hidden="true"></i> Login <b class="caret"></b>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="home-page">
+    <div class="row mt-5">
+        <div class="col-md-4 push-md-4 text-center" style="margin-top:10%">
+            <img src="assets/images/logo.png" class="user-avatar" />
+
+            <form role="form">
+                <div class="form-content mt-5">
+                    <div class="form-group">
+                        <input type="text" autofocus  ng-model="name" class="form-control input-underline input-lg " id="" >
+                    </div>
+                    <p class="markText">Company Name, Company Symbol, CIK or Person's Name</p>
+
+                </div>
+                <a class="btn rounded-btn searchBtn" [routerLink]="['/searchresult']"> Equity Insight Search </a> &nbsp;
+                <a class="btn rounded-btn searchBtn" [routerLink]="['/']">I' feel lucky</a>
+            </form>
+        </div>
+    </div>
+</div>
