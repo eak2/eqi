@@ -20,10 +20,19 @@
 
             <form role="form">
                 <div class="form-content mt-5">
-                    <div class="form-group">
-                        <input type="text" autofocus  ng-model="name" class="form-control input-underline input-lg " id="" >
+                    <div class="form-group w-100" >
+                        <md-input-container class="w-100">
+                            <input mdInput placeholder="Company Name, Company Symbol, CIK or Person's Name" [mdAutocomplete]="auto" [formControl]="stateCtrl">
+                        </md-input-container>
+
+                        <md-autocomplete #auto="mdAutocomplete">
+                            <md-option *ngFor="let state of filteredStates | async" [value]="state">
+                                {{ state }}
+                            </md-option>
+                        </md-autocomplete>
                     </div>
-                    <p class="markText">Company Name, Company Symbol, CIK or Person's Name</p>
+
+                    <!-- <p class="markText">Company Name, Company Symbol, CIK or Person's Name</p> -->
 
                 </div>
                 <a class="btn rounded-btn searchBtn" [routerLink]="['/searchresult']"> Equity Insight Search </a> &nbsp;
